@@ -172,7 +172,7 @@ impl Args {
                 }),
                 None => 2, // default
             },
-            minimum_weight_magnitude: match matches.value_of("security-level") {
+            minimum_weight_magnitude: match matches.value_of("minimum-weight-magnitude") {
                 Some(x) => x.parse().unwrap_or_else(|e| {
                     eprintln!("Error: invalid minimum weight of magnitude: {}: {}", e, x);
                     process::exit(1);
